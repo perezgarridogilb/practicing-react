@@ -1,0 +1,48 @@
+sincronizacion
+subsidiaries
+src\renderer\utils\redux\sagas\SubsidiariesSaga.ts
+points to `subsidiaries?pagination=false&include=warehouses,free_checkouts` in a GET VAR
+
+PRODUCTS
+src\renderer\utils\redux\sagas\ProductsSaga.ts
+points to `products/prices?pagination=false&subsidiary_id=${settings.subsidiary.id}&active=1` in a GET VAR
+
+USERS
+`/subsidiaries/${currentSubsidiary.id}/users?pagination=false&include=token`
+src\renderer\utils\redux\sagas\UsersSaga.ts
+
+CUSTOMERS
+'/pdv/customers'
+src\renderer\utils\redux\sagas\CustomersSaga.ts
+
+CUSTOMERS TYPES
+src\renderer\utils\redux\sagas\CustomerTypesSaga.ts
+customer_types?pagination=false
+
+BRANDS
+src\renderer\utils\redux\sagas\BrandsSaga.ts
+brands?pagination=false
+
+SAT CFDI USAGE
+'sat/cfdi_usages?pagination=false'
+src\renderer\utils\redux\sagas\SatSaga.ts
+
+PAYMENT METHODS
+'sat/payment_ways?pagination=false'
+src\renderer\utils\redux\sagas\SatSaga.ts
+
+REGIMEN FISCAL
+src\renderer\utils\redux\sagas\SatSaga.ts
+'sat/tax_regimes'
+
+CREAR CLIENTE
+'inventory/create/client'
+
+UPDATE CLIENTS
+'inventory/quantity/client/batch'
+
+INVENTORY REQUEST
+'/inventory/order?pagination=false&active=1&include=user,transporter,inventorymovements.product,inventorymovements.sourcewarehouse.subsidiary,inventorymovements.targetwarehouse.subsidiary&limit=30'
+
+FETCH PRODUCTS:
+`products/prices?pagination=false&subsidiary_id=${settings.subsidiary.id}&active=1`
