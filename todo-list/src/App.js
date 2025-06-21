@@ -6,6 +6,7 @@ import Container from './components/Container';
 import Header from './components/Header';
 import InputTask from './components/InputTask';
 import { useEffect, useState } from 'react';
+import TaskContent from './components/TaskContent';
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
     <Container>
       <Header />
       <InputTask createTask={createTask}></InputTask>
+      <TaskContent tasks={tasks}/>
     </Container>
   );
 }
