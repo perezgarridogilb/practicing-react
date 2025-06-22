@@ -1,6 +1,6 @@
 import { Header, Icon, Grid, Label, Button, Segment } from "semantic-ui-react";
 export default function Task(props) {
-    const { task } = props;
+    const { task, deleteTask } = props;
 
     const { idTask, taskName, categoryTask } = task;
 
@@ -19,7 +19,7 @@ export default function Task(props) {
             <Header as="h5">{idTask}</Header>
             <Grid center columns={2}>
                 <Grid.Column>
-                    <Button color="red" onClick={() => console.log("Eliminar")}>
+                    <Button color="red" onClick={() => deleteTask(idTask)}>
                         <Icon/> Eliminar
                     </Button>
                 </Grid.Column>

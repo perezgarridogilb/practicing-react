@@ -31,12 +31,20 @@ function App() {
     
   };
   console.log(tasks);
+  const deleteTask = (id) => {
+    debugger;
+    console.log('Eliminando tarea desde APP JS: '+id);
+    const currentTask = tasks.filter((task) => task.idTask !== id)
+    console.log(currentTask);
+    setTasks(currentTask);
+    
+  }
 
   return (
     <Container>
       <Header />
       <InputTask createTask={createTask}></InputTask>
-      <TaskContent tasks={tasks}/>
+      <TaskContent tasks={tasks} deleteTask={deleteTask}/>
     </Container>
   );
 }
