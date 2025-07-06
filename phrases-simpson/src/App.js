@@ -2,7 +2,7 @@ import Logo from './the-simpson.png';
 import Container from './components/Container';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
-import ChracterContainer from './components/ChracterContainer';
+import CharacterContainer from './components/CharacterContainer';
 import { useState } from 'react';
 import quotes from './quotes.json'
 
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Container>
         <Header/>
-        { !characters ? <Welcome resApi={resApi}/> : (<ChracterContainer characters={characters} resApi={resApi} />) }
+        { !characters ? <Welcome resApi={resApi}/> : (<CharacterContainer characters={characters} resApi={resApi} />) }
         
         
       </Container>
