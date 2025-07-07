@@ -5,20 +5,20 @@ import "./Header.scss";
 
 export default function Header() {
   const currentPath = useLocation();
-  //const finalCurrentPath = currentPath.pathname.replace("/", "");
+  const finalCurrentPath = currentPath.pathname.replace("/", "");
 
   //const [activeItem, setActiveItem] = useState(finalCurrentPath);
   const navigate = useNavigate();
 
   //const history = useHistory();
 
-  const [activeItem, setActiveItem] = useState('');
+  const [activeItem, setActiveItem] = useState(finalCurrentPath);
 
   const handleItemClick = (e, { name }) => {
     console.log("Clickeando;" + e + " name;" + name);  
     // para marcar el seleccionado  
     setActiveItem(name);
-    // navigate(`${name}`)
+     navigate(`${name}`)
   };
 
   return (
